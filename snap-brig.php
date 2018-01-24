@@ -14,10 +14,26 @@ $prisoners = array("brent"=>"brent", "miguel"=>"miguel", "nat"=>"nat");
 echo $crime[array_rand($crime)];
 echo $prisoners[array_rand($prisoners)];
 
+/* Dylan's solution please complete
 
-/*
-$input = array("Neo", "Morpheus", "Trinity", "Cypher", "Tank");
-$rand_keys = array_rand($input, 2);
-echo $input[$rand_keys[0]] . "\n";
-echo $input[$rand_keys[1]] . "\n";
-?>
+<?php
+function throwInBrig() {
+    $crimes = ["dividing by zero", "larceny", "embezzlement", "praising Comcast", "tampering with replicators", "vehicular manslaughter"];
+    $prisoners = ["Brent", "Miguel", "Nat"];
+
+    $conviction = $crimes[array_rand($crimes)];
+    $perpetrator = $prisoners[random_int(0, count($prisoners) - 1)];
+
+    echo "Mr. Worf, throw $perpetrator in the brig for $conviction!" . PHP_EOL;
+
+    $solitaryCell = new \stdClass();
+    $solitaryCell->conviction = $conviction;
+    $solitaryCell->perpetrator = $perpetrator;
+    return($solitaryCell);
+}
+
+$solitaryCell = throwInBrig();
+
+var_dump($solitaryCell);
+
+*/
